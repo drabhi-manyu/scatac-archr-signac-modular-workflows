@@ -1,0 +1,3 @@
+sample_id,arrow_file
+SAMPLE1,/path/to/arrow_files/SAMPLE1.arrow
+SAMPLE2,/path/to/arrow_files/SAMPLE2.arrow

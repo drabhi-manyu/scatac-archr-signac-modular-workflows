@@ -1,0 +1,41 @@
+# Paths
+work_dir: "/path/to/project_root"
+arrow_dir: "arrow_files"
+out_base: "results"
+
+# ArchR
+genome: "hg38"
+threads: 8
+
+# Sample parsing
+arrow_regex_keep: "SAMPLE1|SAMPLE2"
+
+# Metadata (optional)
+metadata_xlsx: "/path/to/Metadata.xlsx"
+metadata_sample_id_col: "Sample_ID"
+metadata_fields:
+  - "Disease_status"
+  - "Gender"
+  - "Age"
+
+# LSI and Harmony
+lsi_var_features: 25000
+lsi_dims: [1, 30]
+lsi_iterations: 2
+cluster_resolution: 0.3
+harmony_group_by: "Sample"
+
+# Filtering
+min_cluster_size: 200
+
+# Peak calling
+group_by_for_peaks: "NK_Clusters"      # or another grouping
+path_to_macs2: "macs2"
+
+# Differential testing
+da_cutoff: "FDR <= 0.1"
+da_test_method: "wilcoxon"
+
+# Motifs
+motif_set: "cisbp"                    # cisbp, encode, etc
+motif_cutoff: "FDR <= 0.1"
